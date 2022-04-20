@@ -1,4 +1,4 @@
-//completed function that moves item from todo to done
+//compiling when "completed"
 
 export default function CompletedList(props) {
     return <h1>Completed List</h1>
