@@ -4,12 +4,12 @@ import ListItem from "./ListItem";
 const ToDoList = ({ toDoLists, movetoCompl }) => {
     return (
         <>
-            <h2> To Do List: </h2>
-            <li>
+            <h2> A To Do List</h2>
+            <ul>
                 {toDoLists.map((item, idx) => (
-                    <ListItem key={item.key} data={item} />
+                    <ListItem key={item.key} data={item} label={"Done"} />
                 ))}
-            </li>
+            </ul>
 
         </>
     );
