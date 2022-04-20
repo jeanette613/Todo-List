@@ -1,46 +1,20 @@
-//interate through seed data (hard coded NEEDS TO BE PASSED)
+//interate through seed data (hard coded NEEDS TO BE PASSED) needs to pass to two siblings so cant live here
+import ListItem from "./ListItem";
 
-//https://reactjs.org/docs/components-and-props.html
-
-export default function ToDoList(props) {
-    const todolists = [
-        {
-            //data needs key
-            key: 1,
-            title: "Get out of Bed",
-            done: true,
-        },
-
-        {
-            key: 2,
-            title: "Breath",
-            done: true,
-        },
-        {
-            key: 3,
-            title: "Do better than yesterday",
-            done: false,
-        }
-    ];
-
+const ToDoList = ({ toDoLists, movetoCompl }) => {
     return (
-        <div className="list">
-            {
-                todolists.map((todolistitem) => {
-                    const { key, title, done } = todolistitem;
-                    return (
-                        <h2>
-                            <ul>
-                                {title}
-                                {done}
-                            </ul>
-                        </h2>
-                    )
-                })
-            }
-        </div>
+        <>
+            <h2> To Do List: </h2>
+            <li>
+                {toDoLists.map((item, idx) => (
+                    <ListItem key={item.key} data={item} />
+                ))}
+            </li>
         //https://reactjs.org/docs/faq-functions.html
         //https://upmostly.com/tutorials/react-onclick-event-handling-with-examples
-    )
+        </>
+    );
 
 };
+
+export default ToDoList;
