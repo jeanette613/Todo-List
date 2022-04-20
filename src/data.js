@@ -19,4 +19,4 @@ const toDoData = [
 
 ];
 
-export default toDoData
+export default toDoData;

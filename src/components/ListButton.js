@@ -1,3 +1,4 @@
-export default function PendingList(props) {
-    return <h1>Pending List</h1>
-};
+// export default function PendingList(props) {
+//     return <h1>Pending List</h1>
+// };
+
